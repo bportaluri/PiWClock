@@ -19,8 +19,8 @@ A cool weather station for Raspberry PI with SenseHat.
 
 ## Installation
 
-Copy the all the PiWClock files in a directory named.
-This script will do the job for you
+Copy the all the PiWClock files in a directory named *piwclock* under your home dir.
+This script will do the job for you:
 
 ```
 cd ~
@@ -37,13 +37,13 @@ python3 piwclock.py
 
 ## Configuration
 
-All configuration settings are stored in the pywclock.cfg script.
+All configuration settings are stored in the *pywclock.cfg* script.
 
 The SenseHatStation changes the display automatically by rotating the Raspberry PI. This means that there are 4 positions available but consider that one side has normally a Micro USB connector attached to power the board.
-What is displayed in the 4 positions is set in the pywclock.cfg script.
+What is displayed in the 4 positions is set in the *pywclock.cfg* script.
 
-To be able to retrieve the weather forecast you must create a free account on OpenWeatherMap and generate an API code.
-Latitude/longitude
+To be able to retrieve the weather forecast you must create a free account on [OpenWeatherMap](https://openweathermap.org/) and generate an API Key.
+Find out your location latitude and longitude and update your coordinates in the configuration file.
 
 ## Autorun
 
@@ -59,14 +59,13 @@ Type in:
 sudo crontab -e
 ```
 This will brings up a crontab window.
-Now, enter the line:
+Enter the following line at the end:
 ```
 @reboot sh /home/pi/piwclock/start.sh
 ```
-This will execute the script once at startup.
+This will execute the *start.sh* script at startup.
 
-
-To test if this is workin reboot your Pi using:
+To test if this is working reboot your Pi and verify the program is started automatically.
 ```
 sudo reboot
 ```

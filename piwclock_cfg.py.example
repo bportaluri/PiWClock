@@ -1,21 +1,12 @@
 # Display settings
 
-HOURS_COLOR = [80,0,140]
+HOURS_COLOR   = [80,0,140]
 MINUTES_COLOR = [140,0,0]
-HOURS_COLOR = [80,0,140]
-MINBAR_COLOR = [60,140,0]
+MINBAR_COLOR  = [60,140,0]
 
 TEMPERATURE_COLOR = [140,0,0]
-HUMIDITY_COLOR = [0,0,140]
-BKG_COLOR = [0,0,0]
-
-
-# openweather settings
-
-OW_AIPKEY="my_openweather_apikey"
-OW_LAT=41.89
-OW_LON=12.48
-OW_DAY=1
+HUMIDITY_COLOR    = [0,0,140]
+BKG_COLOR         = [0,0,0]
 
 
 # Modes to display based on orientation
@@ -25,4 +16,12 @@ OW_DAY=1
 # 3 - Display temperature
 # 4 - Display relative humidity from the SenseHat sensor
 
-MODES=[3,0,1,2]
+MODES = [3,0,1,2]
+
+
+# openweather settings
+
+OWM_AIPKEY = "my_openweather_apikey"
+OWM_LAT = 41.89
+OWM_LON = 12.48
+OWM_DAY = 1

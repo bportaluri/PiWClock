@@ -52,7 +52,7 @@ def do_clock2(force_redraw):
   
 def do_wforecast(force_redraw):
 
-  sense.show_openweather_forecast(cfg.OW_AIPKEY, cfg.OW_LAT, cfg.OW_LON, cfg.OW_DAY)
+  sense.show_openweather_forecast(cfg.OWM_AIPKEY, cfg.OWM_LAT, cfg.OWM_LON, cfg.OWM_DAY)
   
 
 def do_temp(force_redraw):
