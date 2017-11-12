@@ -32,6 +32,7 @@ def do_clock(force_redraw):
       sense.show_digits34(t.tm_min, 0, 4, sense.scale_rgb_color(cfg.MINUTES_COLOR, x))
   do_clock.prev_min=t.tm_min
 
+
 def do_clock2(force_redraw):
   if not hasattr(do_clock2, "prev_hour"):
     do_clock2.prev_hour = 0
@@ -42,7 +43,7 @@ def do_clock2(force_redraw):
     sense.clear()
   
   sense.show_tiny_hour(t.tm_hour%12, 2, cfg.HOURS_COLOR)
-  do_clock2.prev_hour=t.tm_hour
+  do_clock2.prev_hour = t.tm_hour
 
   px = round(t.tm_min*29/60)
   
@@ -84,7 +85,7 @@ while True:
 
   if orientation!=prev_orientation:
     print("Orientation: %d" % orientation)
-    print("Mode: %d" % mode)
+    print("Mode       : %d" % mode)
     sense.clear()
     sense.set_rotation(orientation*90)
     force_redraw = True

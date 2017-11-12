@@ -1,19 +1,20 @@
 # SenseHatStation
 
-A cool weather station for Raspberry PI with SenseHat
+A cool weather station for Raspberry PI with SenseHat.
 
 
 ## Features
 
-- Two nice digital clock display
-- Temperature and humidity
+- Two nice digital clock display modes
+- Temperature and humidity (not accurate)
 - Weather forecast using OpenWeatherMap
 
-The teperature display is not really accurate because the Sense Hat sensor is not reliable and heavily influenced by the Raspberry CPU heat.
+
 
 ## Requirements
 
-Python 3
+- Raspberry Pi 2 or 3
+- Sense HAT
 
 
 ## Installation
@@ -22,8 +23,9 @@ Copy the all the PiWClock files in a directory named.
 This script will do the job for you
 
 ```
-wget  xxx
-unzip
+cd ~
+wget https://github.com/bportaluri/PiWClock/archive/master.zip
+unzip -j -d piwclock master.zip
 ```
 
 
@@ -68,4 +70,30 @@ To test if this is workin reboot your Pi using:
 ```
 sudo reboot
 ```
-	
+
+
+## Troubleshooting
+
+
+### Configuration file not found
+You get the following error:
+```
+ImportError: No module named 'piwclock_cfg'
+```
+Rename *piwclock_cfg.py.example* to *piwclock_cfg.py*.
+
+
+### Python 3
+You get the following error:
+```
+ImportError: No module named http.client
+```
+The PiWClock runs on Python 3 ensure to launch it with the correct command:
+```
+python3 piwclock.py
+```
+
+### Wrong temperature
+
+The temperature display is not really accurate because the Sense Hat sensor is not reliable and heavily influenced by the Raspberry CPU heat.
+There is not much we can do for this. Sorry.
