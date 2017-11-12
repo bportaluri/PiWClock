@@ -39,8 +39,8 @@ python3 piwclock.py
 
 All configuration settings are stored in the *pywclock.cfg* script.
 
-The SenseHatStation changes the display automatically by rotating the Raspberry PI. This means that there are 4 positions available but consider that one side has normally a Micro USB connector attached to power the board.
-What is displayed in the 4 positions is set in the *pywclock.cfg* script.
+The SenseHatStation changes the display automatically by rotating the Raspberry PI. This means that there are 4 positions available but consider that one side has normally a micro-USB connector attached to power the board.
+What is displayed in the 4 positions is defined in the *pywclock.cfg* script.
 
 To be able to retrieve the weather forecast you must create a free account on [OpenWeatherMap](https://openweathermap.org/) and generate an API Key.
 Find out your location latitude and longitude and update your coordinates in the configuration file.
@@ -49,21 +49,16 @@ Find out your location latitude and longitude and update your coordinates in the
 
 After having configured your preferred displays and maybe tweaked the colors, you should now configure your PI to automatically start the PiWClock at boot.
 
-Ensure the start.sh script is executable, typing this command:
-```
-chmod 755 start.sh
-```
-
 Type in:
 ```
 sudo crontab -e
 ```
-This will brings up a crontab window.
+This will brings up the editor.
 Enter the following line at the end:
 ```
-@reboot sh /home/pi/piwclock/start.sh
+@reboot python3 /home/pi/piwclock/piwclock.py
 ```
-This will execute the *start.sh* script at startup.
+This will execute the *piwclock.py* script at startup.
 
 To test if this is working reboot your Pi and verify the program is started automatically.
 ```
