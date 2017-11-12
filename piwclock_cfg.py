@@ -19,9 +19,10 @@ BKG_COLOR         = [0,0,0]
 MODES = [3,0,1,2]
 
 
-# openweather settings
+# OpenWeatherMap settings
 
 OWM_AIPKEY = "my_openweather_apikey"
 OWM_LAT = 41.89
 OWM_LON = 12.48
 OWM_DAY = 1
+	
