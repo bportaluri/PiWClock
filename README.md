@@ -32,6 +32,7 @@ unzip -j -d piwclock master.zip
 ## Run
 
 ```
+cd piwclock
 python3 piwclock.py
 ```
 
